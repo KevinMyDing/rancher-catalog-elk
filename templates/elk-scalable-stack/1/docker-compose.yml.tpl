@@ -151,8 +151,6 @@ services:
     labels:
       io.rancher.container.start_once: true
     network_mode: none
-    volumes:
-      - 'elasticsearch-storage-volume:/usr/share/elasticsearch/data'
 
   elasticsearch-sysctl:
     environment:
@@ -253,7 +251,3 @@ services:
     stdin_open: true
     tty: true
 
-volumes:
-  elasticsearch-storage-volume:
-    driver: local
-    per_container: true
